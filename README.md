@@ -24,7 +24,7 @@ A website that offers a timed coding quiz with multiple-choice questions. This a
 ## Website
 [Product of MNlegion](https://mnlegion.github.io/Quizzinator/)
 
-![Password Generator Screenshot](./assets/images/Screenshot%202022-03-27%20142536.png)
+![Password Generator Screenshot](./assets/images/Screenshot%202022-04-03%20151345.png)
 
 ## GitHub
 [MNlegion Profile](https://github.com/MNlegion)
