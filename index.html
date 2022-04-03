@@ -32,14 +32,34 @@
         </ul>
     </div>
 
-            <form>
-                <input type="button" value="Start Quiz" onClick="quizStart()">
-                <!-- Need to display a Start Button only, which then in turn displays the first question to begin the quiz -->
-                <input type="button" value="Quiz Timer" id="timer">
-            </form>
+    <form>
+        <input type="button" value="Start Quiz" onClick="quizStart()">
+        <!-- Need to display a Start Button only, which then in turn displays the first question to begin the quiz -->
+        <input type="button" value="Quiz Timer" id="timer">
+    </form>
+
+    <div class="quiz-title">
+        <div class="result"></div>
+    <div class="question-container" id="question">
+        Question goes here.
+    </div>
+    <div class="choice-container">
+        <button class="choice" onclick="" id="ch1">choice1</button>
+
+        <button class="choice" id="ch2">choice2</button>
+
+        <button class="choice" id="ch3">choice3</button>
+
+        <button class="choice" id="ch4">choice4</button>
+    </div>
+    <div class="navigation">
+        <button class="submit">Submit</button>
+        <button class="next">Next</button>
+    </div>
+    </div>
 
 
-            <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
