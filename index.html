@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzinator</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1>Welcome to the Quizzinator</h1>
+    <div>
+        <h2>Rules to Play</h2>
+        <ul>
+            <li>
+                Press the start button below to begin.
+            </li>
+            <li>
+                Once you have selected your choice, press submit to see the result.
+            </li>
+            <li>
+                After seeing the result of your choice, the next question will appear.
+            </li>
+            <li>
+                Note: a 10 second penalty will be incurred for every wrong answer!
+            </li>
+            <li>
+                Do your best and try to get that high score!
+            </li>
+        </ul>
+    </div>
+
+            <form>
+                <input type="button" value="Start Quiz" onClick="quizStart()">
+                <!-- Need to display a Start Button only, which then in turn displays the first question to begin the quiz -->
+                <input type="button" value="Quiz Timer" id="timer">
+            </form>
+
+
+            <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
