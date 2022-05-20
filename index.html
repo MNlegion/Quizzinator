@@ -2,68 +2,94 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizzinator</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quizzinator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+  <header class="mb-5 px-3 invisible">
+    <div class="row">
+      <div class="col-6 ">
+        <a href="#" id="view-highscores" class="purple-text">View Highscores</a>
+      </div>
+      <div class=" purple-text col-6 font-weight-bold text-right">Time Left: <span id="time-left"></span></div>
+    </div>
+  </header>
+  <main class="container justify-content-center">
 
-    <!-- Quiz Information and Rules -->
-    <div class="rule_box">
-        <h1 class="rule-title">Welcome to the Quizzinator</h1>
-        <div class="rule-list">
-            <ul>
-                <li>
-                    Press the start button below to begin.
-                </li>
-                <li>
-                    Once you have selected your choice, press submit to see the result.
-                </li>
-                <li>
-                    After seeing the result of your choice, the next question will appear.
-                </li>
-                <li>
-                    Note: a 10 second penalty will be incurred for every wrong answer!
-                </li>
-                <li>
-                    Do your best and try to get that high score!
-                </li>
-            </ul>
+    <!-- start screen -->
+    <div class="row">
+      <div class="col-12">
+        <div id="start-screen" class="text-center">
+          <h1 class="">Play the game!</h1>
+          <button id="start-game-btn" class="btn btn-primary">Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- quiz content -->
+    <div class="row">
+      <div class="col-12 col-md-8 col-xl-6 mx-auto ">
+        <div id="quiz-content" class="m-auto d-flex flex-column hide">
+          <h2 class="" id="question-title"></h2>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- post-game info -->
+    <div class="row">
+      
+        <div id="post-game-screen" class="col-12 text-center hide">
+          <h2 class="">You Finished!</h2>
+          <p>Your Score: <span id="user-score"></span></p>
+          <form id="game-end-form" class=" justify-content-center form-inline mx-auto " method="POST">
+            <input type="text" id="user-initials" class="form-inline form-control w-50 w-lg-25"
+              placeholder="Input Initials!">
+
+            <button type="submit" id="add-highscore-btn" class="form-inline btn btn-primary">Add Highscore</button>
+
+          </form>
+        </div>
+
+        <div id="high-scores-display" class="col-12 col-md-8 col-xl-6 mx-auto hide">
+          <h2 class="mx-auto text-center">High Scores:</h2>
+          <div id="high-scores-list" class="w-50 mx-auto">
+          </div>
+        </div>
+
+        <div id="" class="col-12 text-center">
+          <button id="play-again-btn" class="hide btn btn-primary mx-auto">Play Again?</button>
+          <button id="clear-highscore" class="hide btn btn-primary mx-auto">Clear High Scores</button>
         </div>
     </div>
 
-    <form>
-        <input type="button" value="Start Quiz" onClick="quizStart()">
-        <!-- Need to display a Start Button only, which then in turn displays the first question to begin the quiz -->
-        <input type="button" value="Quiz Timer" id="timer">
-    </form>
+    <!-- high scores screen -->
+    <div class="row">
+      <div id="high-scores-display" class="col-12 col-md-8 col-xl-6 mx-auto hide">
+        <h2 class="mx-auto text-center">High Scores:</h2>
+        <div id="high-scores-list" class="w-50 mb-3 mx-auto high-score-div">
 
-    <div class="quiz-title">
-        <div class="result">
         </div>
-        <div class="question-container" id="question">
-            Question goes here.
-        </div>
-        <div class="choice-container">
-            <button class="choice" id="ch1">choice1</button>
+      </div>
 
-            <button class="choice" id="ch2">choice2</button>
-
-            <button class="choice" id="ch3">choice3</button>
-
-            <button class="choice" id="ch4">choice4</button>
-        </div>
-        <div class="navigation">
-            <button class="submit">Submit</button>
-            <button class="next">Next</button>
-        </div>
     </div>
 
+    <!-- answers information -->
+    <div class="row">
+      <div id="answer-info" class="col-12 col-md-8 col-xl-6 mx-auto hide">
+        <hr>
+        <div id="answer-info-text" class=""></div>
+      </div>
+    </div>
 
-    <script src="./assets/js/script.js"></script>
+  </main>
+  <script src="assets/questions.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
