@@ -1,15 +1,49 @@
-:root {
-    --primary-color: rgb(13, 161, 33);
-    --secondary-color: rgb(45,45,45);
-    --tertiary-color: rgb(207, 146, 14);
-}
-
-body{
-    background: #007bff;
-    padding: 0;
-    margin: 0;    
-    width:100vw;
-    height: 100vh;    
-}
+body {
+    background-color: lavenderblush;
+    color:#383838;
+  }
+  
+  a:hover{
+    opacity: 75%;
+    color: blueviolet;
+  }
+  
+  a:active{
+    opacity: 25%;
+    color: blueviolet;
+  }
+  
+  .purple-text{
+  color: blueviolet;
+  }
+  
+  button{
+    background-color: blueviolet!important;
+    margin: 3px;
+    border: 1px blueviolet solid!important;
+    border-radius: 5px;
+  }
+  
+  button:hover{
+    opacity: 75%;
+  }
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  .hide {
+    display: none!important;
+  }
+  
+  .high-score-even {
+    padding: 3px;
+  
+  }
+  
+  .high-score-odd{
+    padding: 3px;
+  
+  }
 
 
