@@ -5,22 +5,22 @@ body {
   
   a:hover{
     opacity: 75%;
-    color: blueviolet;
+    color: rgb(245, 101, 214);
   }
   
   a:active{
     opacity: 25%;
-    color: blueviolet;
+    color: rgb(245, 101, 214);
   }
   
   .purple-text{
-  color: blueviolet;
+  color: rgb(245, 101, 214);
   }
   
   button{
-    background-color: blueviolet!important;
+    background-color: rgb(245, 101, 214)!important;
     margin: 3px;
-    border: 1px blueviolet solid!important;
+    border: 1px rgb(245, 101, 214)!important;
     border-radius: 5px;
   }
   
