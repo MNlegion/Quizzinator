@@ -1,95 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quizzinator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Quizzinator</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-  <header class="mb-5 px-3 invisible">
-    <div class="row">
-      <div class="col-6 ">
-        <a href="#" id="view-highscores" class="purple-text">View Highscores</a>
-      </div>
-      <div class=" purple-text col-6 font-weight-bold text-right">Time Left: <span id="time-left"></span></div>
-    </div>
-  </header>
-  <main class="container justify-content-center">
-
-    <!-- start screen -->
-    <div class="row">
-      <div class="col-12">
-        <div id="start-screen" class="text-center">
-          <h1 class="">Quizzinator</h1>
-          <button id="start-game-btn" class="btn btn-primary">Start Game</button>
+  <body>
+    <header class="mb-5 px-3 invisible">
+      <div class="row">
+        <div class="col-6">
+          <a href="#" id="view-highscores" class="purple-text"
+            >View Highscores</a
+          >
+        </div>
+        <div class="purple-text col-6 font-weight-bold text-right">
+          Time Left: <span id="time-left"></span>
         </div>
       </div>
-    </div>
-
-    <!-- quiz content -->
-    <div class="row">
-      <div class="col-12 col-md-8 col-xl-6 mx-auto ">
-        <div id="quiz-content" class="m-auto d-flex flex-column hide">
-          <h2 class="" id="question-title"></h2>
-
+    </header>
+    <main class="container justify-content-center">
+      <!-- start screen -->
+      <div class="row">
+        <div class="col-12">
+          <div id="start-screen" class="text-center">
+            <h1 class="">Quizzinator</h1>
+            <button id="start-game-btn" class="btn btn-primary">
+              Start Game
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- post-game info -->
-    <div class="row">
-      
+      <!-- quiz content -->
+      <div class="row">
+        <div class="col-12 col-md-8 col-xl-6 mx-auto">
+          <div id="quiz-content" class="m-auto d-flex flex-column hide">
+            <h2 class="" id="question-title"></h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- post-game info -->
+      <div class="row">
         <div id="post-game-screen" class="col-12 text-center hide">
           <h2 class="">Quiz Complete!</h2>
           <p>Your Score: <span id="user-score"></span></p>
-          <form id="game-end-form" class=" justify-content-center form-inline mx-auto " method="POST">
-            <input type="text" id="user-initials" class="form-inline form-control w-50 w-lg-25"
-              placeholder="Input Initials!">
+          <form
+            id="game-end-form"
+            class="justify-content-center form-inline mx-auto"
+            method="POST"
+          >
+            <input
+              type="text"
+              id="user-initials"
+              class="form-inline form-control w-50 w-lg-25"
+              placeholder="Input Initials!"
+            />
 
-            <button type="submit" id="add-highscore-btn" class="form-inline btn btn-primary">Add Highscore</button>
-
+            <button
+              type="submit"
+              id="add-highscore-btn"
+              class="form-inline btn btn-primary"
+            >
+              Add Highscore
+            </button>
           </form>
         </div>
 
-        <div id="high-scores-display" class="col-12 col-md-8 col-xl-6 mx-auto hide">
+        <div
+          id="high-scores-display"
+          class="col-12 col-md-8 col-xl-6 mx-auto hide"
+        >
           <h2 class="mx-auto text-center">High Scores:</h2>
-          <div id="high-scores-list" class="w-50 mx-auto">
-          </div>
+          <div id="high-scores-list" class="w-50 mx-auto"></div>
         </div>
 
         <div id="" class="col-12 text-center">
-          <button id="play-again-btn" class="hide btn btn-primary mx-auto">Play Again?</button>
-          <button id="clear-highscore" class="hide btn btn-primary mx-auto">Clear High Scores</button>
-        </div>
-    </div>
-
-    <!-- high scores screen -->
-    <div class="row">
-      <div id="high-scores-display" class="col-12 col-md-8 col-xl-6 mx-auto hide">
-        <h2 class="mx-auto text-center">High Scores:</h2>
-        <div id="high-scores-list" class="w-50 mb-3 mx-auto high-score-div">
-
+          <button id="play-again-btn" class="hide btn btn-primary mx-auto">
+            Play Again?
+          </button>
+          <button id="clear-highscore" class="hide btn btn-primary mx-auto">
+            Clear High Scores
+          </button>
         </div>
       </div>
 
-    </div>
-
-    <!-- answers information -->
-    <div class="row">
-      <div id="answer-info" class="col-12 col-md-8 col-xl-6 mx-auto hide">
-        <hr>
-        <div id="answer-info-text" class=""></div>
+      <!-- high scores screen -->
+      <div class="row">
+        <div
+          id="high-scores-display"
+          class="col-12 col-md-8 col-xl-6 mx-auto hide"
+        >
+          <h2 class="mx-auto text-center">High Scores:</h2>
+          <div
+            id="high-scores-list"
+            class="w-50 mb-3 mx-auto high-score-div"
+          ></div>
+        </div>
       </div>
-    </div>
 
-  </main>
-  <script src="assets/js/questions.js"></script>
-  <script src="assets/js/script.js"></script>
-</body>
-
+      <!-- answers information -->
+      <div class="row">
+        <div id="answer-info" class="col-12 col-md-8 col-xl-6 mx-auto hide">
+          <hr />
+          <div id="answer-info-text" class=""></div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
